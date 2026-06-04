@@ -1,0 +1,18 @@
+{
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+        "creationTimestamp": "2026-05-26T06:59:41Z",
+        "deletionTimestamp": "2026-05-28T16:33:07Z",
+        "labels": {
+            "kubernetes.io/metadata.name": "open5gs"
+        },
+        "name": "open5gs",
+        "resourceVersion": "4205504",
+        "uid": "ba514088-281a-4f36-828f-d6f7c2bcc22d"
+    },
+    "spec":{},
+    "status": {
+        "phase": "Terminating"
+    }
+}
