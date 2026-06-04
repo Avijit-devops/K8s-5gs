@@ -5,7 +5,7 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.903034996+05:30"
+    created: "2026-06-04T14:48:42.121862575+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -88,14 +88,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-0.1.3.tgz
     version: 0.1.3
   free5gc-amf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.905051683+05:30"
+    created: "2026-06-04T14:48:42.123793074+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -119,14 +119,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-amf-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-amf-0.1.3.tgz
     version: 0.1.3
   free5gc-ausf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.907083088+05:30"
+    created: "2026-06-04T14:48:42.12544864+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -150,14 +150,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-ausf-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-ausf-0.1.3.tgz
     version: 0.1.3
   free5gc-chf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.908683165+05:30"
+    created: "2026-06-04T14:48:42.126776004+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -181,14 +181,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-chf-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-chf-0.1.3.tgz
     version: 0.1.3
   free5gc-nrf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.910315021+05:30"
+    created: "2026-06-04T14:48:42.128419478+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -212,14 +212,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-nrf-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-nrf-0.1.3.tgz
     version: 0.1.3
   free5gc-nssf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.911840338+05:30"
+    created: "2026-06-04T14:48:42.131714891+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -243,14 +243,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-nssf-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-nssf-0.1.3.tgz
     version: 0.1.3
   free5gc-pcf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.913917599+05:30"
+    created: "2026-06-04T14:48:42.133152912+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -274,14 +274,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-pcf-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-pcf-0.1.3.tgz
     version: 0.1.3
   free5gc-smf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.915661034+05:30"
+    created: "2026-06-04T14:48:42.134380991+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -305,14 +305,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-smf-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-smf-0.1.3.tgz
     version: 0.1.3
   free5gc-udm:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.91678545+05:30"
+    created: "2026-06-04T14:48:42.13544261+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -336,14 +336,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-udm-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-udm-0.1.3.tgz
     version: 0.1.3
   free5gc-udr:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.918018279+05:30"
+    created: "2026-06-04T14:48:42.136501914+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -367,14 +367,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-udr-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-udr-0.1.3.tgz
     version: 0.1.3
   free5gc-upf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.919919249+05:30"
+    created: "2026-06-04T14:48:42.138219706+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -398,14 +398,14 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-upf-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-upf-0.1.3.tgz
     version: 0.1.3
   free5gc-webui:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 3.4.3
-    created: "2026-06-04T14:06:24.921229524+05:30"
+    created: "2026-06-04T14:48:42.139408663+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -429,7 +429,7 @@ entries:
     sources:
     - http://free5gc.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/free5gc-webui-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/free5gc-webui-0.1.3.tgz
     version: 0.1.3
   iperf3:
   - annotations:
@@ -437,7 +437,7 @@ entries:
       category: apps
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-06-04T14:06:24.922067523+05:30"
+    created: "2026-06-04T14:48:42.140207783+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -463,14 +463,14 @@ entries:
     sources:
     - https://iperf.fr/
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/iperf3-0.1.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/iperf3-0.1.3.tgz
     version: 0.1.3
   oai-enb:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v1
     appVersion: 1.2.2
-    created: "2026-06-04T14:06:24.922354971+05:30"
+    created: "2026-06-04T14:48:42.140472887+05:30"
     description: 'OpenAirInterface enodeb '
     digest: 44a98cd273c048da576eedc418bafbaa0680750177346be9a5c2260b36d976dc
     home: https://github.com/Gradiant/charts
@@ -486,7 +486,7 @@ entries:
     sources:
     - https://gitlab.eurecom.fr/oai/openairinterface5g/
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/oai-enb-0.1.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/oai-enb-0.1.1.tgz
     version: 0.1.1
   oai-gnb:
   - annotations:
@@ -494,7 +494,7 @@ entries:
       category: apps
     apiVersion: v2
     appVersion: 2021.w32
-    created: "2026-06-04T14:06:24.923125304+05:30"
+    created: "2026-06-04T14:48:42.141255125+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -517,14 +517,14 @@ entries:
     sources:
     - https://gitlab.eurecom.fr/oai/openairinterface5g/
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/oai-gnb-0.3.2.tgz
+    - https://avijit-devops.github.io/k8s-5gs/oai-gnb-0.3.2.tgz
     version: 0.3.2
   open5gs:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.944308189+05:30"
+    created: "2026-06-04T14:48:42.158376421+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -641,14 +641,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-2.3.4.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-2.3.4.tgz
     version: 2.3.4
   open5gs-amf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.946237162+05:30"
+    created: "2026-06-04T14:48:42.159983536+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -670,14 +670,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-amf-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-amf-2.3.1.tgz
     version: 2.3.1
   open5gs-ausf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.94774202+05:30"
+    created: "2026-06-04T14:48:42.162665967+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -698,14 +698,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-ausf-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-ausf-2.3.1.tgz
     version: 2.3.1
   open5gs-bsf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.949489493+05:30"
+    created: "2026-06-04T14:48:42.165203307+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -726,14 +726,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-bsf-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-bsf-2.3.1.tgz
     version: 2.3.1
   open5gs-hss:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.955450568+05:30"
+    created: "2026-06-04T14:48:42.171184707+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -760,14 +760,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-hss-2.3.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-hss-2.3.0.tgz
     version: 2.3.0
   open5gs-mme:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.957159889+05:30"
+    created: "2026-06-04T14:48:42.172577633+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -789,14 +789,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-mme-2.3.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-mme-2.3.0.tgz
     version: 2.3.0
   open5gs-nrf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.958355408+05:30"
+    created: "2026-06-04T14:48:42.173641787+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -818,14 +818,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-nrf-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-nrf-2.3.1.tgz
     version: 2.3.1
   open5gs-nssf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.95943494+05:30"
+    created: "2026-06-04T14:48:42.174774929+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -846,14 +846,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-nssf-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-nssf-2.3.1.tgz
     version: 2.3.1
   open5gs-pcf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.96592741+05:30"
+    created: "2026-06-04T14:48:42.181339256+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -879,14 +879,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-pcf-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-pcf-2.3.1.tgz
     version: 2.3.1
   open5gs-pcrf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.971883245+05:30"
+    created: "2026-06-04T14:48:42.187126894+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -913,14 +913,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-pcrf-2.3.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-pcrf-2.3.0.tgz
     version: 2.3.0
   open5gs-scp:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.978461266+05:30"
+    created: "2026-06-04T14:48:42.193198523+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -947,14 +947,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-scp-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-scp-2.3.1.tgz
     version: 2.3.1
   open5gs-sepp:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.980517066+05:30"
+    created: "2026-06-04T14:48:42.194466426+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -977,14 +977,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-sepp-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-sepp-2.3.1.tgz
     version: 2.3.1
   open5gs-sgwc:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.981777898+05:30"
+    created: "2026-06-04T14:48:42.197120353+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1005,14 +1005,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-sgwc-2.3.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-sgwc-2.3.0.tgz
     version: 2.3.0
   open5gs-sgwu:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.983020856+05:30"
+    created: "2026-06-04T14:48:42.198846621+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1033,14 +1033,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-sgwu-2.3.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-sgwu-2.3.0.tgz
     version: 2.3.0
   open5gs-smf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.98454468+05:30"
+    created: "2026-06-04T14:48:42.200928021+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1061,14 +1061,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-smf-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-smf-2.3.1.tgz
     version: 2.3.1
   open5gs-udm:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.986569602+05:30"
+    created: "2026-06-04T14:48:42.20222583+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1090,14 +1090,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-udm-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-udm-2.3.1.tgz
     version: 2.3.1
   open5gs-udr:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.992904147+05:30"
+    created: "2026-06-04T14:48:42.208420027+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1123,14 +1123,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-udr-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-udr-2.3.1.tgz
     version: 2.3.1
   open5gs-upf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:24.99443846+05:30"
+    created: "2026-06-04T14:48:42.209713428+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1152,14 +1152,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-upf-2.3.2.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-upf-2.3.2.tgz
     version: 2.3.2
   open5gs-webui:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
-    created: "2026-06-04T14:06:25.001313016+05:30"
+    created: "2026-06-04T14:48:42.215669791+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1187,14 +1187,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/open5gs-webui-2.3.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/open5gs-webui-2.3.1.tgz
     version: 2.3.1
   packetrusher:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2b26573
-    created: "2026-06-04T14:06:25.002540094+05:30"
+    created: "2026-06-04T14:48:42.217067577+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1216,14 +1216,14 @@ entries:
     sources:
     - https://github.com/HewlettPackard/PacketRusher
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/packetrusher-0.0.3.tgz
+    - https://avijit-devops.github.io/k8s-5gs/packetrusher-0.0.3.tgz
     version: 0.0.3
   srs-epc:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v1
     appVersion: "23.11"
-    created: "2026-06-04T14:06:25.002798468+05:30"
+    created: "2026-06-04T14:48:42.217374399+05:30"
     description: 'SRS epc '
     digest: 90ccd59cae9b0acaa02c23917c533f306b44dc0f7fbb9ccc23cab32dfa37ac6e
     home: https://github.com/gradiant/5g-charts
@@ -1238,14 +1238,14 @@ entries:
     sources:
     - https://github.com/srsran/srsRAN_4G
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/srs-epc-0.2.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/srs-epc-0.2.1.tgz
     version: 0.2.1
   srs-ue:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v1
     appVersion: "23.11"
-    created: "2026-06-04T14:06:25.003196744+05:30"
+    created: "2026-06-04T14:48:42.217736253+05:30"
     description: 'SRS ue '
     digest: b3f73cb639ec60652bdce4519467252994f3551160c7793859ce408be19019e4
     home: https://github.com/Gradiant/charts
@@ -1261,14 +1261,14 @@ entries:
     sources:
     - https://github.com/srsran/srsRAN_4G
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/srs-ue-0.2.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/srs-ue-0.2.0.tgz
     version: 0.2.0
   srsran-4g-enb:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v1
     appVersion: "23.11"
-    created: "2026-06-04T14:06:25.003549415+05:30"
+    created: "2026-06-04T14:48:42.218084062+05:30"
     description: 'srsRAN enodeb '
     digest: b276782cb2888d01c65fb94e43045fcbd3b68d9826a14b68090a05ca5ee64adc
     home: https://github.com/Gradiant/charts
@@ -1284,14 +1284,14 @@ entries:
     sources:
     - https://github.com/srsran/srsRAN_4G
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/srsran-4g-enb-0.2.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/srsran-4g-enb-0.2.0.tgz
     version: 0.2.0
   srsran-4g-zmq:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v1
     appVersion: "23.11"
-    created: "2026-06-04T14:06:25.003957399+05:30"
+    created: "2026-06-04T14:48:42.21850151+05:30"
     description: 'srsRAN4g enodeb + ue. srsRAN4g enodeb + ue. '
     digest: 5dffd81bd040e6cb3e6d3a3dbe93430820b25280a0d0b85d6042d827632ff9e4
     home: https://github.com/Gradiant/charts
@@ -1308,12 +1308,12 @@ entries:
     - https://github.com/srsran/srsRAN_4G
     - https://github.com/srsran/srsRAN_4G
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/srsran-4g-zmq-0.2.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/srsran-4g-zmq-0.2.0.tgz
     version: 0.2.0
   srsran-5g:
   - apiVersion: v2
     appVersion: 23.10.1
-    created: "2026-06-04T14:06:25.005291628+05:30"
+    created: "2026-06-04T14:48:42.219489652+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1330,12 +1330,12 @@ entries:
     - https://github.com/gradiant/5g-charts
     - https://github.com/srsran/srsRAN_Project
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/srsran-5g-1.0.0.tgz
+    - https://avijit-devops.github.io/k8s-5gs/srsran-5g-1.0.0.tgz
     version: 1.0.0
   srsran-5g-zmq:
   - apiVersion: v2
     appVersion: 23.10.1
-    created: "2026-06-04T14:06:25.007062054+05:30"
+    created: "2026-06-04T14:48:42.220594812+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1352,7 +1352,7 @@ entries:
     - https://github.com/gradiant/5g-charts
     - https://github.com/srsran/srsRAN_Project
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/srsran-5g-zmq-1.0.1.tgz
+    - https://avijit-devops.github.io/k8s-5gs/srsran-5g-zmq-1.0.1.tgz
     version: 1.0.1
   ueransim-gnb:
   - annotations:
@@ -1360,7 +1360,7 @@ entries:
       category: apps
     apiVersion: v2
     appVersion: 3.2.6
-    created: "2026-06-04T14:06:25.008671648+05:30"
+    created: "2026-06-04T14:48:42.221420922+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1385,7 +1385,7 @@ entries:
     sources:
     - https://github.com/aligungr/UERANSIM
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/ueransim-gnb-0.2.6.tgz
+    - https://avijit-devops.github.io/k8s-5gs/ueransim-gnb-0.2.6.tgz
     version: 0.2.6
   ueransim-ues:
   - annotations:
@@ -1393,7 +1393,7 @@ entries:
       category: apps
     apiVersion: v2
     appVersion: 3.2.6
-    created: "2026-06-04T14:06:25.009562747+05:30"
+    created: "2026-06-04T14:48:42.222587106+05:30"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1418,6 +1418,6 @@ entries:
     sources:
     - https://github.com/aligungr/UERANSIM
     urls:
-    - https://avijit-devops.github.io/K8s-5gs/ueransim-ues-0.1.2.tgz
+    - https://avijit-devops.github.io/k8s-5gs/ueransim-ues-0.1.2.tgz
     version: 0.1.2
-generated: "2026-06-04T14:06:24.889241782+05:30"
+generated: "2026-06-04T14:48:42.108755021+05:30"
