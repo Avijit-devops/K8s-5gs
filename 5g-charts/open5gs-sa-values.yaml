@@ -6,21 +6,26 @@ global: {}
 
 mongodb:
   enabled: true
+  
+  image:
+    registry: registry-1.docker.io
+    repository: bitnami/mongodb
+    digest: "sha256:681e57e88ecea84c8c23d2dd25ec0602d97b490f926662a288f888359cc2105d"
 
   persistence:
     enabled: true
-    existingClaim: open5gs-mongodb-static
+    existingClaim: open5gs-mongodb-longhorn
 
-  nodeSelector:
-    kubernetes.io/hostname: worker1
-
-  resources: 
-    requests: 
-      cpu: 100m 
-      memory: 256Mi 
-    limits: 
-      cpu: 500m 
-      memory: 768Mi
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        preference:
+          matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - worker1
 #################################################
 # Populate
 #################################################
@@ -50,8 +55,6 @@ sgwu:
 sepp:
   enabled: false
 
-bsf:
-  enabled: false
 
 #################################################
 # SCP
@@ -73,7 +76,7 @@ scp:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
    
   services: 
     sbi: 
@@ -91,6 +94,11 @@ nrf:
 
   replicaCount: 1
 
+  config:
+    servingList:
+      - plmn_id:
+          mcc: "001"
+          mnc: "01"
   podAntiAffinityPreset: soft
  
   affinity:
@@ -102,7 +110,37 @@ nrf:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
+
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+
+
+#################################################
+# BSF
+#################################################
+
+bsf:
+  enabled: true
+
+  replicaCount: 1
+
+  podAntiAffinityPreset: soft
+
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - primary
 
   services:
     sbi:
@@ -131,7 +169,7 @@ amf:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
   startupProbe:
     enabled: true
     initialDelaySeconds: 5
@@ -156,26 +194,26 @@ amf:
   config:
     guamiList:
       - plmn_id:
-          mcc: "999"
-          mnc: "70"
+          mcc: "001"
+          mnc: "01"
         amf_id:
           region: 2
           set: 1
 
     taiList:
       - plmn_id:
-          mcc: "999"
-          mnc: "70"
+          mcc: "001"
+          mnc: "01"
         tac:
           - 1
 
     plmnList:
       - plmn_id:
-          mcc: "999"
-          mnc: "70"
+          mcc: "001"
+          mnc: "01"
         s_nssai:
           - sst: 1
-            sd: "111111"
+            sd: "000001"
 
   services:
     sbi:
@@ -186,8 +224,9 @@ amf:
     
     ngap:
       type: LoadBalancer
-      loadBalancerIP: 192.168.1.40
-      externalTrafficPolicy: Cluster
+      loadBalancerClass: loxilb.io/loxilb
+      loadBalancerIP: 192.168.1.51
+#      externalTrafficPolicy: Cluster
 
 #################################################
 # SMF
@@ -209,7 +248,7 @@ smf:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
 
   startupProbe:
     enabled: true
@@ -236,8 +275,8 @@ smf:
   useSCP: true
 
   config:
-    pcrf:
-      enabled: false
+    logLevel: info
+
 
     session:
       - subnet: 10.45.0.1/16
@@ -262,6 +301,15 @@ smf:
 
 upf:
   enabled: true
+  
+#  podAnnotations:
+#    k8s.v1.cni.cncf.io/networks: |
+#      [{
+#        "name": "upf-macvlan",
+#        "ips": ["192.168.0.251/16"]
+#      }]
+
+  replicaCount: 1
 
   replicaCount: 1
 
@@ -276,7 +324,7 @@ upf:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
 
   containerSecurityContext:
     enabled: true
@@ -315,28 +363,35 @@ upf:
     failureThreshold: 2
 
   config:
-    pfcp:
-      server:
-        - dev: eth0
-          advertise: 192.168.1.41
+    logLevel: info
 
-    gtpu:
-      server:
-        - dev: eth0
-          advertise: 192.168.1.41
+    upf:
+      pfcp:
+        dev: eth0
+        advertise: "192.168.1.52"
+
+      gtpu:
+        dev: eth0
+        advertise: "192.168.1.52"
 
     session:
       - subnet: 10.45.0.1/16
+        gateway: 10.45.0.1
+        dnn: internet
+
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
 
   services:
     gtpu:
       type: LoadBalancer
-      loadBalancerIP: 192.168.1.41
-      externalTrafficPolicy: Cluster
+      loadBalancerClass: loxilb.io/loxilb
+      loadBalancerIP: 192.168.1.52
+#      externalTrafficPolicy: Cluster
 #################################################
 # NSSF
 #################################################
-
 nssf:
   enabled: true
 
@@ -353,13 +408,13 @@ nssf:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
+
   config:
     nsiList:
       - uri: http://open5gs-nrf-sbi:7777
-        s_nssai:
-          sst: 1
-          sd: "111111"
+        sst: 1
+        sd: "000001"
 
   services:
     sbi:
@@ -388,7 +443,7 @@ ausf:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
   services:
     sbi:
       sessionAffinity: ClientIP
@@ -415,7 +470,7 @@ udm:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
   services:
     sbi:
       sessionAffinity: ClientIP
@@ -443,7 +498,7 @@ udr:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
   services:
     sbi:
       sessionAffinity: ClientIP
@@ -471,7 +526,7 @@ pcf:
           - key: role
             operator: In
             values:
-            - secondary
+            - primary
   services:
     sbi:
       sessionAffinity: ClientIP
@@ -488,8 +543,16 @@ webui:
 
   replicaCount: 1
 
-  nodeSelector:
-    kubernetes.io/hostname: worker1
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - primary
 
   services:
     http:

@@ -1,0 +1,397 @@
+USER-SUPPLIED VALUES:
+amf:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  config:
+    guamiList:
+    - amf_id:
+        region: 2
+        set: 1
+      plmn_id:
+        mcc: "001"
+        mnc: "01"
+    plmnList:
+    - plmn_id:
+        mcc: "001"
+        mnc: "01"
+      s_nssai:
+      - sd: "000001"
+        sst: 1
+    taiList:
+    - plmn_id:
+        mcc: "001"
+        mnc: "01"
+      tac:
+      - 1
+  enabled: true
+  livenessProbe:
+    enabled: true
+    failureThreshold: 2
+    initialDelaySeconds: 10
+    periodSeconds: 3
+    timeoutSeconds: 1
+  podAntiAffinityPreset: soft
+  readinessProbe:
+    enabled: true
+    failureThreshold: 2
+    initialDelaySeconds: 3
+    periodSeconds: 2
+    timeoutSeconds: 1
+  replicaCount: 1
+  services:
+    ngap:
+      externalTrafficPolicy: Cluster
+      loadBalancerIP: 192.168.1.40
+      type: LoadBalancer
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+  startupProbe:
+    enabled: true
+    failureThreshold: 30
+    initialDelaySeconds: 5
+    periodSeconds: 2
+    timeoutSeconds: 1
+ausf:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  enabled: true
+  podAntiAffinityPreset: soft
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+bsf:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  enabled: true
+  podAntiAffinityPreset: soft
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+global: {}
+hss:
+  enabled: false
+mme:
+  enabled: false
+mongodb:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - worker2
+        weight: 100
+  enabled: true
+  persistence:
+    enabled: true
+    existingClaim: open5gs-mongodb-longhorn
+nrf:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  config:
+    servingList:
+    - plmn_id:
+        mcc: "001"
+        mnc: "01"
+  enabled: true
+  podAntiAffinityPreset: soft
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+nssf:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  config:
+    nsiList:
+    - sd: "000001"
+      sst: 1
+      uri: http://open5gs-nrf-sbi:7777
+  enabled: true
+  podAntiAffinityPreset: soft
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+pcf:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  enabled: true
+  podAntiAffinityPreset: soft
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+pcrf:
+  enabled: false
+populate:
+  enabled: false
+scp:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  enabled: true
+  podAntiAffinityPreset: soft
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+sepp:
+  enabled: false
+sgwc:
+  enabled: false
+sgwu:
+  enabled: false
+smf:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  config:
+    dns:
+    - 8.8.8.8
+    - 1.1.1.1
+    logLevel: info
+    session:
+    - dnn: internet
+      gateway: 10.45.0.1
+      subnet: 10.45.0.1/16
+  enabled: true
+  livenessProbe:
+    enabled: true
+    failureThreshold: 2
+    initialDelaySeconds: 20
+    periodSeconds: 5
+    timeoutSeconds: 2
+  podAntiAffinityPreset: soft
+  readinessProbe:
+    enabled: true
+    failureThreshold: 2
+    initialDelaySeconds: 10
+    periodSeconds: 3
+    timeoutSeconds: 1
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+  startupProbe:
+    enabled: true
+    failureThreshold: 12
+    initialDelaySeconds: 10
+    periodSeconds: 5
+    timeoutSeconds: 2
+  useDiameter: false
+  useSCP: true
+udm:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  enabled: true
+  podAntiAffinityPreset: soft
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+udr:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  enabled: true
+  podAntiAffinityPreset: soft
+  replicaCount: 1
+  services:
+    sbi:
+      sessionAffinity: ClientIP
+      sessionAffinityConfig:
+        clientIP:
+          timeoutSeconds: 10800
+upf:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  command:
+  - /bin/sh
+  - -c
+  - |
+    iptables -t nat -A POSTROUTING -s 10.45.0.0/16 -j MASQUERADE
+    exec open5gs-upfd -c /opt/open5gs/etc/open5gs/upf.yaml
+  config:
+    dns:
+    - 8.8.8.8
+    - 1.1.1.1
+    logLevel: info
+    session:
+    - dnn: internet
+      gateway: 10.45.0.1
+      subnet: 10.45.0.1/16
+    upf:
+      gtpu:
+        advertise: 192.168.1.41
+        dev: eth0
+      pfcp:
+        advertise: 192.168.1.41
+        dev: eth0
+  containerSecurityContext:
+    capabilities:
+      add:
+      - NET_ADMIN
+    enabled: true
+    privileged: true
+    runAsNonRoot: false
+  enabled: true
+  livenessProbe:
+    enabled: true
+    failureThreshold: 2
+    initialDelaySeconds: 20
+    periodSeconds: 5
+    timeoutSeconds: 2
+  podAntiAffinityPreset: soft
+  readinessProbe:
+    enabled: true
+    failureThreshold: 2
+    initialDelaySeconds: 10
+    periodSeconds: 3
+    timeoutSeconds: 1
+  replicaCount: 1
+  services:
+    gtpu:
+      externalTrafficPolicy: Cluster
+      loadBalancerIP: 192.168.1.41
+      type: LoadBalancer
+  startupProbe:
+    enabled: true
+    failureThreshold: 12
+    initialDelaySeconds: 10
+    periodSeconds: 5
+    timeoutSeconds: 2
+webui:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - secondary
+        weight: 100
+  enabled: true
+  replicaCount: 1
+  services:
+    http:
+      nodePorts:
+        http: "30999"
+      type: NodePort

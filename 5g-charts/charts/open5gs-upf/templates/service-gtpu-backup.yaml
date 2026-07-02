@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: {{ include "common.names.fullname" . }}-gtpu
   namespace: {{ .Release.Namespace | quote }}
-  labels:
-    {{- include "common.labels.standard" . | nindent 4 }}
+  labels: {{- include "common.labels.standard" . | nindent 4 }}
     {{- if .Values.commonLabels }}
-    {{- include "common.tplvalues.render" (dict "value" .Values.commonLabels "context" $) | nindent 4 }}
+    {{- include "common.tplvalues.render" ( dict "value" .Values.commonLabels "context" $ ) | nindent 4 }}
     {{- end }}
   {{- if or .Values.services.gtpu.annotations .Values.commonAnnotations }}
   annotations:
@@ -14,57 +13,41 @@ metadata:
     {{- include "common.tplvalues.render" (dict "value" .Values.services.gtpu.annotations "context" $) | nindent 4 }}
     {{- end }}
     {{- if .Values.commonAnnotations }}
-    {{- include "common.tplvalues.render" (dict "value" .Values.commonAnnotations "context" $) | nindent 4 }}
+    {{- include "common.tplvalues.render" ( dict "value" .Values.commonAnnotations "context" $ ) | nindent 4 }}
     {{- end }}
   {{- end }}
-
 spec:
   type: {{ .Values.services.gtpu.type }}
-
-  {{- if and (eq .Values.services.gtpu.type "LoadBalancer") (.Values.services.gtpu.loadBalancerClass) }}
-  loadBalancerClass: {{ .Values.services.gtpu.loadBalancerClass | quote }}
-  {{- end }}
-
   {{- if .Values.services.gtpu.sessionAffinity }}
   sessionAffinity: {{ .Values.services.gtpu.sessionAffinity }}
   {{- end }}
-
   {{- if .Values.services.gtpu.sessionAffinityConfig }}
-  sessionAffinityConfig:
-{{ toYaml .Values.services.gtpu.sessionAffinityConfig | indent 4 }}
+  sessionAffinityConfig: {{- include "common.tplvalues.render" (dict "value" .Values.services.gtpu.sessionAffinityConfig "context" $) | nindent 4 }}
   {{- end }}
-
   {{- if and .Values.services.gtpu.clusterIP (eq .Values.services.gtpu.type "ClusterIP") }}
   clusterIP: {{ .Values.services.gtpu.clusterIP }}
   {{- end }}
-
-  {{- if and (eq .Values.services.gtpu.type "LoadBalancer") (.Values.services.gtpu.loadBalancerIP) }}
+  {{- if (and (eq .Values.services.gtpu.type "LoadBalancer") (not (empty .Values.services.gtpu.loadBalancerIP))) }}
   loadBalancerIP: {{ .Values.services.gtpu.loadBalancerIP }}
   {{- end }}
-
   {{- if and (eq .Values.services.gtpu.type "LoadBalancer") .Values.services.gtpu.loadBalancerSourceRanges }}
-  loadBalancerSourceRanges:
-{{ toYaml .Values.services.gtpu.loadBalancerSourceRanges | indent 4 }}
+  loadBalancerSourceRanges: {{- toYaml .Values.services.gtpu.loadBalancerSourceRanges | nindent 4 }}
   {{- end }}
-
   {{- if or (eq .Values.services.gtpu.type "LoadBalancer") (eq .Values.services.gtpu.type "NodePort") }}
-  externalTrafficPolicy: {{ .Values.services.gtpu.externalTrafficPolicy | default "Cluster" }}
+  externalTrafficPolicy: {{ .Values.services.gtpu.externalTrafficPolicy | quote }}
   {{- end }}
-
   ports:
     - name: gtpu
       port: {{ .Values.services.gtpu.ports.gtpu }}
-      targetPort: gtpu
       protocol: UDP
-      {{- if and (or (eq .Values.services.gtpu.type "NodePort") (eq .Values.services.gtpu.type "LoadBalancer")) (.Values.services.gtpu.nodePorts.gtpu) }}
+      targetPort: gtpu
+      {{- if and (or (eq .Values.services.gtpu.type "NodePort") (eq .Values.services.gtpu.type "LoadBalancer")) (not (empty .Values.services.gtpu.nodePorts.gtpu)) }}
       nodePort: {{ .Values.services.gtpu.nodePorts.gtpu }}
+      {{- else if eq .Values.services.gtpu.type "ClusterIP" }}
+      nodePort: null
       {{- end }}
-
     {{- if .Values.services.gtpu.extraPorts }}
-{{ include "common.tplvalues.render" (dict "value" .Values.services.gtpu.extraPorts "context" $) | indent 4 }}
+    {{- include "common.tplvalues.render" (dict "value" .Values.services.gtpu.extraPorts "context" $) | nindent 4 }}
     {{- end }}
-
   publishNotReadyAddresses: true
-
-  selector:
-{{ include "common.labels.matchLabels" . | indent 4 }}
+  selector: {{- include "common.labels.matchLabels" . | nindent 4 }}
